@@ -1,0 +1,20 @@
+# Kali comes with 600+ tools pre-installed!
+# Check if they're present
+
+# Check Nmap
+nmap --version
+# Output: Nmap version 7.92 or higher
+
+# Check Metasploit
+msfconsole --version
+# Output: Shows version number
+
+# Check Wireshark
+wireshark --version
+# Output: Wireshark 4.0 or higher
+
+# Check Burp Suite (may need install)
+which burpsuite
+# Output: /usr/bin/burpsuite (if installed)
+
+# If any tool not found, follow installation below
