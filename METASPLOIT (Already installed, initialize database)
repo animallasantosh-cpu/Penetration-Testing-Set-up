@@ -1,0 +1,13 @@
+# Initialize database
+sudo msfdb init
+# Wait 2-3 minutes
+
+# Check status
+sudo msfdb status
+# Output: Should show "Connected to database"
+
+# Launch msfconsole
+sudo msfconsole
+# Takes 10-15 seconds to start
+# Type "help" for commands
+# Type "exit" to quit
