@@ -1,0 +1,31 @@
+# After Kali boots, login as root
+
+# STEP 1: Update package list
+sudo apt update
+# Takes 2-3 minutes
+# Output ends with: "Reading package lists... Done"
+
+# STEP 2: Upgrade all installed packages
+sudo apt full-upgrade -y
+# Takes 10-20 minutes depending on updates
+# The "-y" flag means "yes" to all prompts
+
+# STEP 3: Install essential build tools
+sudo apt install -y build-essential git curl wget vim
+# Takes 5 minutes
+
+# STEP 4: Clean up
+sudo apt autoremove -y
+sudo apt autoclean
+# Frees up disk space
+
+# STEP 5: Verify installation
+uname -a
+# Output: Should show "Linux kali-pentester..." etc.
+
+lsb_release -a
+# Output: Shows Kali version (2024.4 or higher)
+
+# STEP 6: Reboot to apply all changes
+sudo reboot
+# Wait for system to restart
