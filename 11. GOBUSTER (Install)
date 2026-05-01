@@ -1,0 +1,9 @@
+# Install
+sudo apt install gobuster
+
+# Verify
+gobuster --version
+# Output: Gobuster 3.6 or higher
+
+# Quick test
+gobuster dir -h
