@@ -1,0 +1,85 @@
+# Create installation script
+cat > ~/install_pentest_tools.sh << 'TOOLS_EOF'
+#!/bin/bash
+
+echo "=========================================="
+echo "Installing Penetration Testing Tools"
+echo "=========================================="
+echo ""
+
+# Update system
+echo "[1/5] Updating system..."
+sudo apt update
+sudo apt full-upgrade -y
+
+# Install networking tools
+echo "[2/5] Installing networking tools..."
+sudo apt install -y \
+    nmap \
+    netcat-openbsd \
+    tcpdump \
+    dsniff \
+    ettercap-common \
+    aircrack-ng
+
+# Install web testing tools
+echo "[3/5] Installing web testing tools..."
+sudo apt install -y \
+    burpsuite \
+    nikto \
+    wpscan \
+    sqlmap \
+    commix \
+    hashcat \
+    hydra
+
+# Install enumeration tools
+echo "[4/5] Installing enumeration tools..."
+sudo apt install -y \
+    enum4linux \
+    smbclient \
+    smbmap \
+    ldap-utils \
+    gobuster \
+    dirsearch \
+    ffuf
+
+# Install exploitation tools
+echo "[5/5] Installing exploitation tools..."
+sudo apt install -y \
+    metasploit-framework \
+    john \
+    wireshark \
+    tshark \
+    theHarvester \
+    sublist3r
+
+# Install optional tools
+echo ""
+echo "Installing optional tools..."
+sudo apt install -y \
+    git \
+    python3-pip \
+    python3-dev \
+    tmux \
+    screen \
+    vim \
+    htop
+
+# Install Nessus (if available)
+echo ""
+echo "For Nessus: Download from https://www.tenable.com/downloads/nessus"
+echo "Install with: sudo dpkg -i Nessus-*.deb"
+
+echo ""
+echo "=========================================="
+echo "Installation Complete!"
+echo "=========================================="
+TOOLS_EOF
+
+# Make script executable
+chmod +x ~/install_pentest_tools.sh
+
+# Run the script
+~/install_pentest_tools.sh
+# Takes 30-45 minutes to complete
