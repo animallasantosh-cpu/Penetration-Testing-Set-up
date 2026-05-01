@@ -1,0 +1,32 @@
+# STEP 1: Download Kali ISO
+cd ~/Downloads
+wget https://images.kali.org/installer-images/kali-linux-2024.4-installer-amd64.iso
+# Wait 10-15 minutes (4GB file)
+
+# Verify checksum (integrity check)
+sha256sum kali-linux-2024.4-installer-amd64.iso
+# Compare with: https://www.kali.org/get-kali/
+
+# STEP 2: Insert USB drive (8GB minimum)
+# Check which device is your USB
+lsblk
+# Example output:
+# NAME   MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+# sda      8:0    0 512G  0 disk
+# sdb      8:16   1  16G  0 disk  ← YOUR USB
+
+# STEP 3: Unmount USB (if auto-mounted)
+sudo umount /dev/sdb*
+# Replace sdb with your USB device
+
+# STEP 4: Write ISO to USB
+sudo dd if=~/Downloads/kali-linux-2024.4-installer-amd64.iso of=/dev/sdb bs=4M
+# Wait 5-10 minutes (copying)
+
+# STEP 5: Verify write was successful
+sudo dd if=/dev/sdb bs=4M count=1024 | sha256sum
+# Compare with original ISO checksum
+
+# STEP 6: Eject USB safely
+sudo eject /dev/sdb
+# Remove USB from computer
