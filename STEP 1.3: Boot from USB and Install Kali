@@ -1,0 +1,47 @@
+STEP 1: Restart your laptop
+STEP 2: Press boot key during startup (see below for your laptop model)
+STEP 3: Select USB drive from boot menu
+
+LAPTOP-SPECIFIC BOOT KEYS:
+Dell       → F12
+HP         → F9
+Lenovo     → F12 or Novo button
+ASUS       → F2 or Delete
+Acer       → F2
+Samsung    → F2 or Esc
+Apple Mac  → Command + Option + P + R (or Cmd + R)
+
+STEP 4: Kali boot menu appears
+    Select: "Graphical Install"
+
+STEP 5: Installation Wizard (follow these exact steps)
+    a) Language: English
+    b) Location: Your country
+    c) Keyboard layout: Your keyboard type
+    d) Hostname: Type "kali-pentester"
+    e) Domain name: Leave BLANK (just press Enter)
+    f) Root password: Create strong password
+       Example: Kali@Pentest#2025!Security
+       Remember this password!
+    g) Confirm password: Re-type same password
+    h) Partitioning:
+       Option 1 (RECOMMENDED): "Use entire disk"
+           Select disk: /dev/sda (your main drive)
+           Partitioning scheme: "All files in one partition"
+       Option 2 (Advanced): Custom partitioning (skip if unsure)
+    i) Partitioning confirmation: Click "Yes, continue"
+    j) Mirror selection:
+       Country: Your country
+       Repository: Keep default
+    k) Software selection (IMPORTANT):
+       Check ALL options:
+       ☑ Kali Linux (complete)
+       ☑ Kali Linux full (all tools)
+       Or select specific categories you need
+    l) GRUB bootloader: Install to /dev/sda
+    m) Installation progress: Wait 20-30 minutes
+    n) Installation complete: Reboot
+
+STEP 6: Remove USB when prompted
+STEP 7: Laptop reboots into Kali Linux
+STEP 8: Login with root / your_password
