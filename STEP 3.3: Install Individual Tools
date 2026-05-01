@@ -1,0 +1,8 @@
+# Verify
+nmap --version
+
+# Install if needed
+sudo apt install nmap
+
+# Check help
+nmap --help | head -20
