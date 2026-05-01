@@ -1,0 +1,22 @@
+# Open terminal (Ctrl + Alt + T on Linux)
+# Check your system specs
+
+# Check CPU cores
+nproc
+# Output: 4, 6, 8, 16, etc. (minimum 4 recommended)
+
+# Check RAM
+free -h
+# Output: Example - total 16Gi (minimum 8GB recommended)
+
+# Check storage
+df -h
+# Output: Shows free space (need at least 100GB free)
+
+# Check if virtualization enabled (for VMs)
+grep -o 'vmx\|svm' /proc/cpuinfo
+# Output: vmx or svm (means virtualization is enabled)
+
+# Check internet speed
+speedtest-cli
+# Output: Upload/Download speed (need Gigabit recommended)
