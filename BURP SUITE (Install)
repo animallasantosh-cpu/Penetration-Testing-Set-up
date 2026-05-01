@@ -1,0 +1,17 @@
+# Download from official site
+cd ~/Downloads
+wget https://portswigger.net/burp/communitydownload
+
+# Or download manually:
+# https://portswigger.net/burp/communitydownload
+
+# Make executable
+chmod +x burpsuite_community_linux_*.sh
+
+# Run installer
+./burpsuite_community_linux_v2024.4.1.sh
+# Follow GUI wizard
+
+# Launch from terminal
+burpsuite &
+# Wait 30 seconds for startup
